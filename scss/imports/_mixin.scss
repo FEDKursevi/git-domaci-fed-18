@@ -73,9 +73,11 @@
                     a{
                         text-decoration: none;
                         color: $navColorLink;
-
+                        text-decoration: underline solid transparent;
+                        @include transition(text-decoration, 1s, ease);
+                        
                         &:hover{
-                            text-decoration: underline;
+                            text-decoration: underline solid #FFFFFF;
                         }
                     }
         
@@ -107,7 +109,6 @@
                     margin: $navLiMargine;
                     padding: $navLiPadding;
                     a{
-                        text-decoration: none;
                         color: $navColorLink;
                     }
         
@@ -122,6 +123,14 @@
     }
 
     @content;
+}
+
+@mixin transition($type, $time, $effect){
+    transition: $type $time $effect;
+    -webkit-transition: $type $time $effect;
+    -moz-transition: $type $time $effect;
+    -ms-transition: $type $time $effect;
+    -o-transition: $type $time $effect;
 }
 
 

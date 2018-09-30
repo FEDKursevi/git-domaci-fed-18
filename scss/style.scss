@@ -68,6 +68,7 @@ main{
                 border-radius: 20px;
                 text-decoration: none;
                 color: #000000;
+                @include transition(background,1s, ease);
 
                 &:hover{
                     background: $buttonHover;
