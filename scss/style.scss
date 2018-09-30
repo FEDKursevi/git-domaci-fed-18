@@ -27,6 +27,33 @@ header{
         }
     }
 }
+main{
+    @include main(){
+
+    }
+
+    section.coverImg{
+        background: url('../slike/intro.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 20% 0 5% 0;
+
+        div.textHolder{
+            background: rgba(30, 30, 30, .5);
+            width: 50%;
+            text-align: center;
+            margin: $centered;
+            color: #FFFFFF;
+
+            h1{
+                margin: $centered;
+                padding: .5%;
+            }
+        }
+    }
+}
+
 
 @media screen and (max-width:768px){
     header{
@@ -44,6 +71,17 @@ header{
                         padding: 2%;
                     }
                 }
+            }
+        }
+    }
+
+    main{
+        section.coverImg{
+            background: #000000;
+            padding: 5% 0 5% 0;
+            div.textHolder{
+                width: 100%;
+                background: none;
             }
         }
     }
