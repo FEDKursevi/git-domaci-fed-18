@@ -1,0 +1,71 @@
+// PROMENLJIVE
+
+//FONT
+$FontSize: 16px;
+$FontFamily: Arial, sans-serif;
+$FontColor: #000000;
+$centered: 0 auto;
+$lineHeight: 1px;
+$hundredPercent: 100%;
+
+//DISPLAY
+$block: block;
+$inlineBlock: inline-block;
+
+//Header
+$headerBackground: #FFFFFF;
+$headerMargine: $centered;
+$headerPadding: 0;
+$headerWidth: 100%;
+$headerHeight: auto;
+$headerColor: #000000;
+
+//Navigation
+$navBackground: #FFFFFF;
+$navMargine: $centered;
+$nevPadding: 0;
+
+    //Navigation -> ul
+    $navUlBackground: #FFFFFF;
+    $navUlMargine: $centered;
+    $navUlPadding: 0;
+
+        //Navigation -> ul -> li
+        $navLiBackground: #FFFFFF;
+        $navLiMargine: $centered;
+        $navLiPadding: 1%;
+
+            //Navigation -> ul -> li:hover + li:hover>a
+            $navHoverBackground: #9900dd;
+            $navHoverColor: #CCCCCC;
+            $navHoverCursor: pointer;
+
+            //Navigation -> ul -> li -> a
+            $navColorLink: #000000;
+
+
+//Main
+$mainBackground: #FFFFFF;
+$mainMargine: $centered;
+$mainPadding: 0;
+$mainWidth: 80%;
+$mainHeight: auto;
+$mainColor: #000000;
+$mainFontFamily: $FontFamily;
+
+
+//Footer
+$footerBackground: #001166;
+$footerMargine: $centered;
+$footerPadding: 0;
+$footerWidth: 100%;
+$footerHeight: 300px;
+$footerColor: #FFFFFF;
+
+//Aside
+$asideWidth: 30%;
+$asideHeight: auto;
+$asideBackground: #ffcc00;
+$asideMargin: $centered;
+$asidePadding: 0;
+$asideColor: $FontColor;

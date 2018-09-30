@@ -1,0 +1,162 @@
+//MIXINS
+
+@mixin fullDimensions{
+    width: $hundredPercent;
+    height: $hundredPercent;
+}
+
+@mixin clearfix{
+    &:before, &:after{
+        content: "";
+        display: table;
+    }
+    &:after{
+        clear: both;
+    }
+}
+
+@mixin preformatedHeadings{
+    margin: $centered;
+    @content;
+}
+
+@mixin preformatedPargraph {
+    margin: $centered;
+}
+
+@mixin preformatedLink {
+    margin: $centered;
+    padding: 0;
+    text-decoration: none;
+    color: $FontColor;
+    @content;
+}
+
+@mixin preformatedUl {
+    list-style: none;
+    margin: $centered;
+    @content;
+}
+
+@mixin preformatedLiVertical{
+    margin: $centered;
+    @content;
+}
+
+@mixin preformatedLiHorizontal {
+    margin: $centered;
+    display: $block;
+    float: left;
+    /* width: needed */
+    @content;
+}
+
+@mixin navigation($orjentacija) {
+    @if($orjentacija == horizontal){
+        nav.navHorizontal{
+            background: $navBackground;
+            margin: $navMargine;
+            padding: $nevPadding;
+            border-bottom: 1px solid #000000; 
+            // width: ;
+            // height: ;
+            ul{
+                display: $block;
+                background: $navUlBackground;
+                margin: $navUlMargine;
+                padding: $navUlPadding;
+                list-style: none;
+                text-align: center;
+                li{
+                    display: $inlineBlock; 
+                    background: $navLiBackground;
+                    margin: $navLiMargine;
+                    padding: $navLiPadding;
+                    a{
+                        text-decoration: none;
+                        color: $navColorLink;
+                    }
+        
+                    &:hover{
+                        cursor: $navHoverCursor;
+                        color: $navHoverColor;
+                        background: $navHoverBackground;
+                    }
+                }
+                
+                @include clearfix();
+            }
+        }
+    }@else if($orjentacija == vertical){
+        nav.navVertical{
+            background: $navBackground;
+            margin: $navMargine;
+            padding: $nevPadding;
+            // width: ;
+            // height: ;
+            ul{
+                background: $navUlBackground;
+                margin: $navUlMargine;
+                padding: $navUlPadding;
+                list-style: none;
+                li{
+                    display: $block; 
+                    background: $navLiBackground;
+                    margin: $navLiMargine;
+                    padding: $navLiPadding;
+                    a{
+                        text-decoration: none;
+                        color: $navColorLink;
+                    }
+        
+                    &:hover{
+                        cursor: $navHoverCursor;
+                        color: $navHoverColor;
+                        background: $navHoverBackground;
+                    }
+                }   
+            }
+        }
+    }
+}
+
+
+@mixin header{
+    background: $headerBackground;
+    margin: $headerMargine;
+    padding: $headerPadding;
+    width: $headerWidth;
+    height: $headerHeight;
+    color: $headerColor;
+    @content;
+}
+
+@mixin main{
+    background: $mainBackground;
+    margin: $mainMargine;
+    padding: $mainPadding;
+    width: $mainWidth;
+    height: $mainHeight;
+    color: $mainColor;
+    @content;
+}
+
+@mixin footer{
+    background: $footerBackground;
+    margin: $footerMargine;
+    padding: $footerPadding;
+    width: $footerWidth;
+    height: $footerHeight;
+    color: $footerColor;
+    @content;
+}
+
+@mixin aside{
+    width: $asideWidth;
+    height: $asideHeight;
+    background: $asideBackground;
+    margin: $asideMargin;
+    padding: $asidePadding;
+    color: $asideColor;
+    @content;
+}
