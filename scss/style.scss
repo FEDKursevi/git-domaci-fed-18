@@ -165,6 +165,44 @@ main{
             }
         }
     }
+
+    section.contact{
+        background: $sectionColor;
+        padding: 4% 0;
+        h1{
+            text-align: center;
+        }
+        div.contactBox{
+            width: 80%;
+            margin: $centered;
+            @include clearfix;
+            div{
+                float: left;
+            }
+            div.map{
+                width: 35%;
+                margin-right:5%;
+            }
+            div.form{
+                width: 60%;
+                form{
+                    background: $narandzasta;
+                    padding: 1%;
+
+                    input, select, textarea{
+                        margin: 1%;
+                        padding: 1%;
+                    }
+                    input{
+                        width: 93%;
+                    }
+                    textarea{
+                        width: 93%;
+                    }
+                }
+            }
+        }
+    }
 }
 
 footer{
@@ -183,6 +221,22 @@ footer{
             div.imgGallery{
                 div{
                     width: 48%;
+                }
+            }
+        }
+
+        section.contact{
+            div.contactBox{
+                div.map, div.form{
+                    clear: both;
+                    margin: $centered;
+                    width: 100%;
+                }
+                div.map{
+                    iframe{
+                        width: 50%;
+                        margin: 4% 25%;
+                    }
                 }
             }
         }
@@ -244,6 +298,19 @@ footer{
                 }
                 a{
                     display: block;
+                }
+            }
+        }
+
+        section.contact{
+            div.contactBox{
+                width: 100%;
+
+                div.map{
+                    iframe{
+                        width: 80%;
+                        margin: 5% 10%;
+                    }
                 }
             }
         }
