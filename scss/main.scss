@@ -1,0 +1,7 @@
+@import 'reset';
+
+.container{
+    @include marginAuto{
+        width: 90%;
+    }
+}
