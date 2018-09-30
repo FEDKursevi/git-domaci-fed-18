@@ -166,6 +166,17 @@ main{
         }
     }
 }
+
+footer{
+    @include footer(){
+        text-align: center;
+    }
+
+    a{
+        color: $narandzasta;
+        text-decoration: none;
+    }
+}
 @media screen and (max-width:1024px){
     main{
         section.imageGallery{
