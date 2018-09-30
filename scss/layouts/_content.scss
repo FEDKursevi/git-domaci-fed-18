@@ -1,0 +1,78 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.container{
+    width: 70%;
+    margin: $centerMargin;
+}
+// HERO ========================================================
+main section#hero{
+    text-align: center;
+    .heroContent{
+        background-color: black;
+        padding: .5em 5.2em 2em 5.2em;
+        h1, h2{
+            color: $color-white;
+            font-weight: 400;
+        }
+        h1{
+            font-size: 3em;
+            line-height: 1.2em;
+        }
+    }
+}
+// HERO MEDIA QUERY
+@include tablet{
+    main section#hero{
+        width: 100%;
+        height: 50vh;
+        padding: 10vh 0;
+        background-image: url('../../slike/intro.jpg');
+        background-size: cover;
+        background-position: center;
+        .heroContent{
+            width: 70%;
+            position: absolute;
+            bottom: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba($color: $color-head-foot, $alpha: .7);
+            padding: .5em 3em;
+        }
+    }
+}
+// BUTTONS ========================================================
+.buttons{
+    background-color: $color-white;
+    height: 5em;
+    .container{
+        width: 100%;
+        text-align: center;
+        padding-top: 1em;
+        button{
+            border: 1px solid $color-fonts;
+            padding: .8em 1em;
+            border-radius: 30px;
+            background-color: $color-bkg;
+            color: $color-fonts;
+            &:hover{
+                color: $color-white;
+                background-color: $color-fonts;
+            }
+        }
+    }
+}
+// BUTTONS MEDIA QUERY
+@include tablet{
+    .buttons{
+        height: 7em;
+        .container{
+            width: 70%;
+            text-align: right;
+            button{
+                margin: 1em;
+            }
+        }
+    }
+} 
+    
