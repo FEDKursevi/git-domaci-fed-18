@@ -1,2 +1,50 @@
 @import 'imports/var';
 @import 'imports/mixin';
+
+*{
+    font-family: $FontFamily;
+}
+html, body{
+    @include fullDimensions;
+}
+
+body{
+    margin: $centered;
+}
+
+header{
+    @include header(){
+
+        @include navigation(horizontal){
+            nav.navHorizontal{
+                ul{
+                    li:first-child{
+                        width: 20%;
+                        background: $narandzasta;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    header{
+        nav.navHorizontal{
+            ul{
+                li{
+                    width: 100%;
+                    clear: both;
+                    text-align: center;
+                    padding: 2% 0;
+
+                    &:first-child{
+                        width:100%;
+                        text-align: left;
+                        padding: 2%;
+                    }
+                }
+            }
+        }
+    }
+}

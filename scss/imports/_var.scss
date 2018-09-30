@@ -1,9 +1,17 @@
 // PROMENLJIVE
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+//BOJE
+$narandzasta: #f75311;
+$tamnoPlava: #374249;
+$titleColor: #374249;
+$buttonHover: #cfd1d3;
+$sectionColor: #f3f7f9;
 
 //FONT
 $FontSize: 16px;
-$FontFamily: Arial, sans-serif;
-$FontColor: #000000;
+$FontFamily: 'Roboto', sans-serif;
+$FontColor: #797979;
 $centered: 0 auto;
 $lineHeight: 1px;
 $hundredPercent: 100%;
@@ -13,44 +21,44 @@ $block: block;
 $inlineBlock: inline-block;
 
 //Header
-$headerBackground: #FFFFFF;
+$headerBackground: #374249;
 $headerMargine: $centered;
 $headerPadding: 0;
 $headerWidth: 100%;
 $headerHeight: auto;
-$headerColor: #000000;
+$headerColor: #FFFFFF;
 
 //Navigation
-$navBackground: #FFFFFF;
+$navBackground: transparent;
 $navMargine: $centered;
 $nevPadding: 0;
 
     //Navigation -> ul
-    $navUlBackground: #FFFFFF;
+    $navUlBackground: transparent;
     $navUlMargine: $centered;
     $navUlPadding: 0;
 
         //Navigation -> ul -> li
-        $navLiBackground: #FFFFFF;
+        $navLiBackground: transparent;
         $navLiMargine: $centered;
-        $navLiPadding: 1%;
+        $navLiPadding: 2%;
 
             //Navigation -> ul -> li:hover + li:hover>a
-            $navHoverBackground: #9900dd;
+            $navHoverBackground: transparent;
             $navHoverColor: #CCCCCC;
             $navHoverCursor: pointer;
 
             //Navigation -> ul -> li -> a
-            $navColorLink: #000000;
+            $navColorLink: #FFFFFF;
 
 
 //Main
-$mainBackground: #FFFFFF;
+$mainBackground: #005555;
 $mainMargine: $centered;
 $mainPadding: 0;
-$mainWidth: 80%;
+$mainWidth: 70%;
 $mainHeight: auto;
-$mainColor: #000000;
+$mainColor: #FFFFFF;
 $mainFontFamily: $FontFamily;
 
 

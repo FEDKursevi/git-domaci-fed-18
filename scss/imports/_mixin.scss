@@ -57,24 +57,26 @@
             background: $navBackground;
             margin: $navMargine;
             padding: $nevPadding;
-            border-bottom: 1px solid #000000; 
             // width: ;
             // height: ;
             ul{
-                display: $block;
                 background: $navUlBackground;
                 margin: $navUlMargine;
                 padding: $navUlPadding;
                 list-style: none;
-                text-align: center;
                 li{
-                    display: $inlineBlock; 
+                    display: $block; 
                     background: $navLiBackground;
                     margin: $navLiMargine;
                     padding: $navLiPadding;
+                    float: left;
                     a{
                         text-decoration: none;
                         color: $navColorLink;
+
+                        &:hover{
+                            text-decoration: underline;
+                        }
                     }
         
                     &:hover{
@@ -118,6 +120,8 @@
             }
         }
     }
+
+    @content;
 }
 
 
