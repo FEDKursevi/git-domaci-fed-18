@@ -1,0 +1,18 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+footer {
+    background-color: $color-head-foot;
+    text-align: center;
+    padding: 2em;
+    color: $color-white;
+
+    a {
+        text-decoration: none;
+        color: $color-orange;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -33,6 +33,8 @@ main section#hero {
         width: 100%;
         height: 50vh;
         padding: 10vh 0;
+        // ne znam zasto nece da je prikaze u browseru, izbacuje mi intro.jpg:1 Failed to load resource: net::ERR_FILE_NOT_FOUND
+        // dok kad radim na live serveru vidi se bkg-img
         background-image: url('../../slike/intro.jpg');
         background-size: cover;
         background-position: center;
@@ -43,7 +45,7 @@ main section#hero {
             bottom: 40%;
             left: 50%;
             transform: translateX(-50%);
-            background-color: rgba($color: $color-head-foot, $alpha: .7);
+            background-color: rgba($color-head-foot, .7);
             padding: .5em 3em;
         }
     }
