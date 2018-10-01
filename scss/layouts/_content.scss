@@ -59,13 +59,14 @@ main section#hero {
         text-align: center;
         padding-top: 1em;
 
-        button {
+        .btn {
             border: 1px solid $color-fonts;
             padding: .8em 1em;
             border-radius: 30px;
             background-color: $color-bkg;
             color: $color-fonts;
             margin: 0 1em;
+            cursor: pointer;
 
             &:hover {
                 color: $color-white;
@@ -172,6 +173,87 @@ main section#hero {
                     float: left;
                 }
             }
+        }
+    }
+}
+
+
+// PRICING =====================================================
+
+.pricing .container {
+    text-align: center;
+    padding: 4em 0;
+
+    h1,
+    p {
+        color: $color-headings;
+        margin: 0 0 1em 0;
+    }
+
+    p {
+        margin-bottom: 3em;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 2em;
+    }
+
+    table {
+        display: none;
+        width: 100%;
+        border-spacing: 0;
+
+        .disabled {
+            border: none;
+        }
+
+        td,
+        th {
+            padding: 1em;
+            margin: 0;
+            border: 1px solid $color-fonts;
+        }
+
+        th {
+            background-color: $color-orange;
+            color: $color-white;
+            font-weight: normal;
+
+
+        }
+
+        td.dark {
+            background: $color-headings;
+            color: $color-white;
+            font-weight: bold;
+        }
+    }
+
+    .btn {
+        border: 1px solid $color-fonts;
+        padding: .8em 1em;
+        border-radius: 30px;
+        background-color: $color-bkg;
+        color: $color-fonts;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-white;
+            background-color: $color-fonts;
+        }
+    }
+}
+
+// PRICING MEDIA QUERY
+@include tablet {
+    .pricing .container {
+        table {
+            display: table;
+        }
+
+        button {
+            display: none;
         }
     }
 }
