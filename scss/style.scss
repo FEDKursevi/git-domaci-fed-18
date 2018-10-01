@@ -27,31 +27,33 @@ header{
         }
     }
 }
+section.coverImg{
+    background: url('../slike/intro.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 60%;
+
+    div.textHolder{
+        background: rgba(30, 30, 30, .5);
+        width: 50%;
+        text-align: center;
+        color: #FFFFFF;
+        position: absolute;
+        left: 50%;
+        bottom: 15%;
+        transform: translate(-50%, -15%);
+
+        h1{
+            margin: $centered;
+            padding: .5%;
+        }
+    }
+}
 main{
     @include main(){
 
-    }
-    
-
-    section.coverImg{
-        background: url('../slike/intro.jpg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        padding: 20% 0 5% 0;
-
-        div.textHolder{
-            background: rgba(30, 30, 30, .5);
-            width: 50%;
-            text-align: center;
-            margin: $centered;
-            color: #FFFFFF;
-
-            h1{
-                margin: $centered;
-                padding: .5%;
-            }
-        }
     }
 
     section.filter{
@@ -96,18 +98,21 @@ main{
                 position: relative;
 
                 &:hover>div.hoverInfo{
-                    display: block;
+                    opacity: 1;
+                    @include transition(opacity,1s,ease);
                 }
 
                 div.hoverInfo{
-                    background: rgba(255, 255, 255, .6);
-                    width: 98%;
+                    background: rgba(255, 255, 255, .7);
+                    width: 94%;
                     position: absolute;
                     margin: 0;
+                    top: 0;
                     height: 40%;
                     padding: 0 3%;
                     color: #000000;
-                    display: none;
+                    opacity: 0;
+
                 }
                 img{
                     width: 100%;
@@ -264,15 +269,17 @@ footer{
         }
     }
 
-    main{
-        section.coverImg{
-            background: #000000;
-            padding: 5% 0 5% 0;
-            div.textHolder{
-                width: 100%;
-                background: none;
-            }
+    section.coverImg{
+        background: #000000;
+        padding: 5% 0 5% 0;
+        height: 20%;
+        div.textHolder{
+            width: 100%;
+            background: none;
         }
+    }
+    
+    main{
 
         section.filter{
             div.filter-container{
