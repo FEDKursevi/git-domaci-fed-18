@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'mixins';
 
+
 @include main;
 
 body {
@@ -8,42 +9,34 @@ body {
 }
 .mainNav {
     height: 3em;
-    
-    .location {
-        background: $color_orange;
-        float: left;
-        padding-right: 2em;
-        height: 100%;
-        width: 11%;
-       
-        
-        a {
-            color: $font_color_w;
-             
-            img {
-            height: 2em;
-            padding-top: 1em;
-        }
-    }
-    }
     .navbar {
         background: $color_dark_blue;
         float: left;
         height: 100%;
-        width: 89%;
+        width:100%;
         .navlist {
             list-style: none;
-            
+            .location {
+                background: $color_orange;
+                padding-bottom: 1em;
+                width: 15%;
+                margin-left: 0;
+                a {
+                    color: $font_color_w;
+                    text-decoration: underline;
+                     img {
+                    height: 2em;
+                    padding-top: 1em;
+                }
+            }
+            }
             li {
                 display: inline-block;
                 text-align: center;
-                padding: 1em;
-                margin-right: 1em;
-                
+                margin:0 2em;
                 a {
                     color: $font_color_w;
                     text-decoration: none;
-                    
                     &:hover {
                         text-decoration: underline;
                     }
@@ -56,7 +49,7 @@ body {
     position: relative;
     height: 30em;
     background: url(../slike/intro.jpg) no-repeat center center;
-    background-size: 100%;
+    background-size: cover;
     .welcome{
         position: absolute;
         left: 50%;
@@ -73,13 +66,11 @@ body {
     }
 }
 .option {
-    
     height: 4em;
     .filters {
         list-style: none;
         float: right;
         margin: 1em 3em;
-       
         li {
             display: inline-block;
             text-align: center;
@@ -89,8 +80,7 @@ body {
             padding: 0.5em;
                 &:hover {
                    background: $grey_hover;
-                   
-               }
+                   }
             a {
                color: $font_color;
                text-decoration: none;
@@ -101,63 +91,59 @@ body {
                }
                
             }
-            
-
         }
     }
-
 }
 .pics {
     background: $blue_section_bkg;
     .picContainer {
-        width: 70%;
+        width: 80%;
         margin: 0 auto;
-        img {
-            width: 135px;
-            height: 180px;
+        .box{
+            width:200px;
+            height: 300px;
+            margin: 1em;
+            overflow: hidden;
             display: inline-block;
-            margin: 0.5em;
         }
-         #pic1:hover {
-                background: gray;
-                opacity: 0.6;
-            }
-
+        img {  
+            height: 100%;
+        }
             }
         }
-    
 .price {
     position: relative;
-    height: 20em;
+    height: 25em;
     text-align: center;
     color: $headline_color;
     h2 {
         padding: 1em;
     }
-
-    table {
-       
+    .dummy {
+        display: none;
+    }
+    table {      
         position: absolute;
         left: 50%;
-        bottom: 10%;
+        bottom: 0;
         transform: translate(-50%,-50%);
         width: 40%;
-         
+        border-collapse: collapse;
         td {
-            border: 1px solid $headline_color;
-            border-collapse: collapse;
+            border: 1px solid $grey_hover;
+            padding: 6px;
         }
         #orange {
             background: $color_orange;
-            color: $font_color_w;
-            
+            color: $font_color_w;     
         }
         #grey {
             background: $color_dark_blue;
-            color: $font_color_w;
-            
+            color: $font_color_w;           
         }
-
+        #empty {
+            border: none;
+        }
     }
 }
 .bottom {
@@ -174,7 +160,6 @@ body {
         .map {
             float: left;
             width: 40%;
-
         }
         .contactForm {
             float: left;
@@ -191,7 +176,6 @@ body {
                 width: 55%;
                 padding: 6px;
                 margin: 1em;
-
             }
             .contactInputII {
                 width: 95%;
@@ -202,10 +186,7 @@ body {
                 width: 95%;
                 padding: 6px;
                 margin: 1em;
-
             }
-            
-
         }
     }
 }
@@ -216,14 +197,121 @@ footer{
     background: $color_dark_blue;
     height: 3em;
     font-size: 12px;
-    
     .copyright {
         padding: 1em;
-    
-    
     a {
         color: $color_orange;
         text-decoration: none;
     }
 }
+}
+@media screen and (max-width: 768px) {
+    .pics {
+        .picContainer  {
+            width: 100%;
+            image {
+                width: 50%;
+            }
+        }
+    }
+    .bottom {
+        height: 30em;
+        .contact {
+            .map {
+                float: none;
+                width: 80%;
+                margin: 0 auto;
+            }
+            .contactForm {
+                float: none;
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .mainNav {
+        height: auto;
+        .navbar {
+            float: none;
+            .navlist {
+                .location {
+                    width: 100%;
+                    text-align: left;
+                    padding-top: 0;
+                }
+                li {                    
+                    text-align: center;
+                    width: 100%;
+                    display: block;
+                    padding: 1em;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    .intro {
+        background: black;
+        height: 20em;
+        .welcome {
+            width: 100%;
+            background: black;
+            color: $font_color_w;
+            opacity: 1;
+        }
+    }
+    .pics {
+        .picContainer  {
+            width: 100%;
+               .box {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    .option {
+        .filters {
+            float: none;
+            li {
+                margin-right: 1em;
+                a{
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .price {
+        height: 15em;
+        .dummy {
+            display: block;
+            border: 1px solid gray;
+            border-radius: 20px;
+            width: 25%;
+            margin: 4em auto;
+            &:hover + table {
+                display: block;
+                margin: -12em auto;
+            }
+        }
+        table {
+            display: none;
+        }
+    }
+    .bottom {
+        height: auto;
+        .contact {
+             width: 95%;
+            .contactForm {
+                select {
+                    width: 95%;
+                    float: none;
+                }
+                .contactInputI {
+                    width: 95%;
+                    float: none;
+                }
+           }    
+        }
+    }
 }

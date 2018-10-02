@@ -6,15 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Git domaci</title>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
+   
 </head>
 <body>
     <nav class="mainNav">
-        <div class="location">
-        <a href="#"><img src="slike/location.png"/>
-        New York</a>
-        </div>
+        
         <div class="navbar">
             <ul class="navlist">
+                <li class="location"><a href="#"><img src="slike/location.png"/>New York</a></li>
                 <li><a href="#">Rent</a></li>
                 <li><a href="#">Buy</a></li>
                 <li><a href="#">Sell</a></li>
@@ -37,12 +36,12 @@
     </section>
     <section class="pics">
         <div class="picContainer">
-        <img id="pic1" src="slike/1.jpg"/>
-        <img src="slike/2.jpg"/>
-        <img src="slike/3.jpg"/>
-        <img src="slike/4.jpg"/>
-        <img src="slike/5.jpg"/>
-        <img src="slike/6.jpg"/>
+        <div class="box pic1" ><img src="slike/1.jpg"/></div>
+        <div class="box pic2" ><img src="slike/2.jpg"/></div>
+        <div class="box pic3" ><img src="slike/3.jpg"/></div>
+        <div class="box pic4" ><img src="slike/4.jpg"/></div>
+        <div class="box pic5" ><img src="slike/5.jpg"/></div>
+        <div class="box pic6" ><img src="slike/6.jpg"/></div>
         </div>
     </section>
 
@@ -50,10 +49,11 @@
         
         <h2>Pricing</h2>
         <p>Our services prices in New York</p>
+        <p class="dummy">Check the prices</p>
         
         <table>
-            <tr><td></td><td></td><td id=orange colspan="2">Price</td></tr>
-            <tr><td></td><td></td><td id=grey>Rent/buy</td><td id=grey>Sell</td></tr>
+            <tr><td id=empty></td><td id=empty></td><td id=orange colspan="2">Price</td></tr>
+            <tr><td id=empty></td><td id=empty></td><td id=grey>Rent/buy</td><td id=grey>Sell</td></tr>
             <tr><td id=orange rowspan="3">Location</td><td id=grey>Downtown</td><td>$3</td><td>$3</td></tr>
             <tr><td id=grey>Center</td><td>$3</td><td>$3</td></tr>
             <tr><td id=grey>Manhattan</td><td>$3</td><td>$3</td></tr>
