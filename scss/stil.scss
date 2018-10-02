@@ -84,5 +84,27 @@
         margin-right: 50px;
         float: right;
         padding: 15px;
+        &:hover{
+            background-color: $hover-dugmici;
+            color: white;
+        }
+    }
+}
+.wrapper-2{
+    width: 100;
+    min-height: 500px;
+    background-color: $sekcija-pozadina;
+    padding: 3%;
+    text-align: center;
+
+    .image{
+        display: inline-block;
+        margin: 20px;
+        width: 200px;
+        height: 250px;
+        img{
+            width: 200px;
+            height: 250px;
+        }
     }
 }
