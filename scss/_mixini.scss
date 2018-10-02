@@ -1,0 +1,16 @@
+@import "promenjive.scss";
+
+
+@mixin navbarmix{
+    color: $svetlosiva1;
+    margin-bottom: 0%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+@mixin navbarmix2 {
+    color: TamnoPlava;
+    margin-bottom: 0%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}

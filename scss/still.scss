@@ -1,0 +1,51 @@
+@import "mixini.scss";
+@import "promenjive.scss";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+#newyork{
+    
+    @include navbarmix;
+    padding-right: 150px;
+    background-color: $Narandasta;
+    text-decoration: underline;
+    margin: 0%;
+}
+
+#tr2{
+    @include navbarmix2;
+}
+
+#navBar{
+    margin-left: 0px;
+}
+
+#tr2, #tr3, #tr4, #tr5{
+  color:$svetlosiva2 ;
+  padding-right: 100px; 
+  background-color: $TamnoPlava;
+}
+
+.image { 
+    position: relative; 
+    width: 100%; /* for IE 6 */
+ }
+ 
+ h2 { 
+    position: absolute; 
+    top: 75%; 
+    left: 25%; 
+    width: 50%; 
+ }
+h1, h2, h3 {
+    background-color: $TamnoPlava;
+}
+
+.img1{
+    height: auto;
+    width: 20%;
+}
