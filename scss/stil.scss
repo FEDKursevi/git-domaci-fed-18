@@ -59,3 +59,30 @@
         }
     }
 }
+.wrapper{
+    @include floater;
+}
+.pictures{
+    position: relative;
+    width: 100%;
+    img{
+        width: 100%;
+    }
+}
+.cene{
+    margin: 0;
+    width: 100%;
+    min-height: 50px;
+    padding-right: 150px;
+    overflow: hidden;
+    .price{
+        border: 1px solid $boja-fonta;
+        color: $boja-fonta;
+        border-radius: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 50px;
+        float: right;
+        padding: 15px;
+    }
+}
